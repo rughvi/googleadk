@@ -29,7 +29,13 @@ root_agent = LlmAgent(
         - Suggest relevant attachments if applicable (empty list if none needed)
         - Email tone should match the purpose (formal for business, friendly for colleagues)
         - Keep emails concise but complete
-
+        
+        IMPORTANT: Your response MUST be valid JSON matching this structure:
+        {
+            "subject": "Subject line here",
+            "body": "Email body here with proper paragraphs and formatting",
+        }
+        
         DO NOT include any explanations or additional text outside the JSON response.
     """,
     output_schema=EmailContent,
